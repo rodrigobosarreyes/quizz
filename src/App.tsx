@@ -1,24 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Link } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" style={{color: 'white'}}>
+      Hello Emm, creías que sería tan sencillo? Pues nope, primero tendrás que realizar este quizz, si aciertas todas de manera correcta tendrás un regalo extra, GL HF!
+      (un consejo, la única lógica válida es la mía, por lo que te recomiendo que pienses como yo)
+
+      <Link to='question-1'>Comenzar</Link>
     </div>
   );
 }
