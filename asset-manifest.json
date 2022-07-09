@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/quizz/static/css/main.d36fead4.css",
+    "main.js": "/quizz/static/js/main.9eabe4b9.js",
+    "static/js/787.fdefc428.chunk.js": "/quizz/static/js/787.fdefc428.chunk.js",
+    "static/media/alune.png": "/quizz/static/media/alune.5908a22872da862da0f9.png",
+    "static/media/yuumi.png": "/quizz/static/media/yuumi.13dd8070c88ec6373489.png",
+    "static/media/question3.png": "/quizz/static/media/question3.73db99f071e6b26de5ca.png",
+    "static/media/peepoHappy.png": "/quizz/static/media/peepoHappy.ffebaa4caf564e58c59e.png",
+    "static/media/me.jpg": "/quizz/static/media/me.797e49b249acf259647f.jpg",
+    "static/media/peepoSad.png": "/quizz/static/media/peepoSad.35564920bf6cad0bc66b.png",
+    "static/media/Madge.png": "/quizz/static/media/Madge.e07a420e498b8561ef9b.png",
+    "static/media/emm.png": "/quizz/static/media/emm.259bb1102824becc71a6.png",
+    "static/media/mexD.png": "/quizz/static/media/mexD.6346dbd7c96760564323.png",
+    "static/media/graves.jpg": "/quizz/static/media/graves.f0cd114a440a6fd91ecf.jpg",
+    "static/media/kayn.jpg": "/quizz/static/media/kayn.148d966458e48bf45452.jpg",
+    "index.html": "/quizz/index.html",
+    "main.d36fead4.css.map": "/quizz/static/css/main.d36fead4.css.map",
+    "main.9eabe4b9.js.map": "/quizz/static/js/main.9eabe4b9.js.map",
+    "787.fdefc428.chunk.js.map": "/quizz/static/js/787.fdefc428.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d36fead4.css",
+    "static/js/main.9eabe4b9.js"
+  ]
+}
