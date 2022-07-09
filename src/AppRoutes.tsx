@@ -7,9 +7,8 @@ import { useTransition, animated } from "react-spring";
 import Question4 from "./pages/question4/Question4";
 import Question5 from "./pages/question5/Question5";
 import Results from "./pages/results/Results";
-import { useEffect, useState } from "react";
-import getRealtime from "./core/hooks/useRealtime";
 import CountdownPage from "./components/countdown/Countdown";
+import Test from "./pages/prueba/prueba";
 
 const AppRoutes = () => {
   const location = useLocation();
@@ -22,14 +21,15 @@ const AppRoutes = () => {
   return transitions((props, items) => (
       <animated.div style={props}>
         <Routes location={items}>
-          <Route path='/' element={<CountdownPage />}/>
-          <Route path='/start' element={<App />}/>
+          {/* <Route path='/' element={<CountdownPage />}/> */}
+          <Route path='/' element={<App />}/>
           <Route path='/question-1' element={<Question1 />}/>
           <Route path='/question-2' element={<Question2 />}/>
           <Route path='/question-3' element={<Question3 />}/>
           <Route path='/question-4' element={<Question4 />}/>
           <Route path='/question-5' element={<Question5 />}/>
           <Route path='/results' element={<Results />}/>
+          <Route path='/test' element={<Test />}/>
         </Routes>
       </animated.div>
     ));
