@@ -5,6 +5,7 @@ import me from '../../assets/img/me.jpg';
 import useHoverAnimation from '../../core/hooks/useHoverAnimation';
 import { animated, SpringRef, useChain, useSpring, useSpringRef, useTrail } from 'react-spring';
 import { useNavigate } from 'react-router-dom';
+import useLocalStorage from '../../core/hooks/useLocalStorage';
 
 const Question4 = () => {
   const navigate = useNavigate();
@@ -14,8 +15,10 @@ const Question4 = () => {
   const [text2, setText2] = useHoverAnimation(false, {color: '#fff'});
   const [hearts, setHearts] = useHoverAnimation(false, {color: '#fff'});
   const [text3, setText3] = useHoverAnimation(false, {color: '#fff', textAlign: 'center'});
+  const [storedValue, saveValue] = useLocalStorage('count', 0);
   
   const onClickAnswer = () => {
+    saveValue(storedValue + 1);
     navigate('/question-5');
   };
 

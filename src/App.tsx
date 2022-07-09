@@ -9,7 +9,7 @@ function App() {
       Hello Emm, creías que sería tan sencillo? Pues nope, primero tendrás que realizar este quizz, si aciertas todas de manera correcta tendrás un regalo extra, GL HF!
       (un consejo, la única lógica válida es la mía, por lo que te recomiendo que pienses como yo)
 
-      <Link to='question-1'>Comenzar</Link>
+      <Link to='/question-1'>Comenzar</Link>
     </div>
   );
 }

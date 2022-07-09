@@ -1,11 +1,9 @@
-import { useEffect, useMemo, useRef, useState } from "react";
-import Countdown, { zeroPad } from "react-countdown";
+import { useEffect, useRef, useState } from "react";
+import Countdown from "react-countdown";
 import { useNavigate } from "react-router-dom";
-import App from "../../App";
-import getRealtime from "../../core/hooks/useRealtime";
 
 export const CountdownPage = () => {
-  const deadline = useRef<Date>(new Date(2022, 5, 18, 20, 48, 0));
+  const deadline = useRef<Date>(new Date(2022, 6, 27, 20, 48, 0));
   const navigate = useNavigate();
 
   const [isTramposa, setTramposa] = useState<boolean>(false);
@@ -34,7 +32,7 @@ export const CountdownPage = () => {
 
   return (
     <div
-      style={{display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', height: '100vh'}}
+      style={{display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', height: '100vh', fontSize: 64}}
     >
       {now ? <Countdown date={deadline.current} onComplete={onComplete}/> : <span>...</span>}
       {isTramposa && <h1>Cheater</h1>}

@@ -6,6 +6,7 @@ import { useSpring, animated } from 'react-spring';
 import { useEffect, useState } from 'react';
 import TrianglePanel from '../../components/triangle-panel/TrianglePanel';
 import { emmTriangles, rodTriangles } from './triangles';
+import useLocalStorage from '../../core/hooks/useLocalStorage';
 
 function Question1() {
   const navigate = useNavigate();
@@ -15,8 +16,10 @@ function Question1() {
   const [{filter: rodFilter}, setRodFilter] = useSpring(() => ({filter: 'grayscale(100%)'}));
   const [isHover1, setHover1] = useState<boolean>(false);
   const [isHover2, setHover2] = useState<boolean>(false);
+  const [storedValue, saveValue] = useLocalStorage('count', 0);
 
   const onClickAnswer = () => {
+    saveValue(1);
     navigate('/question-2');
   }
 

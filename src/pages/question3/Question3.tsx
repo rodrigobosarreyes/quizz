@@ -7,6 +7,7 @@ import peepoHappy from '../../assets/img/peepoHappy.png';
 import peepoSad from '../../assets/img/peepoSad.png';
 import madge from '../../assets/img/Madge.png';
 import useHoverAnimation from '../../core/hooks/useHoverAnimation';
+import useLocalStorage from '../../core/hooks/useLocalStorage';
 
 const Question3 = () => {
   const navigate = useNavigate();
@@ -15,6 +16,8 @@ const Question3 = () => {
   const [text1, setText1] = useHoverAnimation(false, {color: '#fff'});
   const [text2, setText2] = useHoverAnimation(false, {color: '#fff'});
   const [isHover1, setHover1] = useState(false);
+  const [storedValue, saveValue] = useLocalStorage('count', 0);
+  
   const onHover1 = (isHover: boolean) => {
     if (isHover) {
       setImgHover1(true, {opacity: 1});
@@ -43,6 +46,11 @@ const Question3 = () => {
   const onClickAnswer = () => {
     navigate('/question-4');
   };
+
+  const onClickCorrectAnswer = () => {
+    saveValue(storedValue + 1)
+    navigate('/question-4');
+  }
   
   useEffect(() => {
     document.title = 'You are beautiful <3'
@@ -57,9 +65,9 @@ const Question3 = () => {
         <section className={styles.leftContainer}
           onMouseEnter={() => onHover1(true)}
           onMouseLeave={() => onHover1(false)}
-          onClick={() => onClickAnswer()}
+          onClick={() => onClickCorrectAnswer()}
         >
-          <div style={{width: '300px', display: 'inline-block', alignSelf: 'center', marginLeft: '100px'}}>
+          <div style={{width: '200px', display: 'inline-block', alignSelf: 'center', marginLeft: '100px'}}>
             <animated.img style={imgHover1} src={isHover1 ? peepoHappy : peepoSad} alt="peepoHappy" className={styles.peepoHappy} />
           </div>
           <animated.span style={text1} className={styles.saveAdc}>Save ADC</animated.span>

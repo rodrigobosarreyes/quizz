@@ -1,10 +1,13 @@
 import { useNavigate } from 'react-router-dom';
+import useLocalStorage from '../../core/hooks/useLocalStorage';
 import styles from './Question5.module.scss';
 
 const Question5 = () => {
   const navigate = useNavigate();
+  const [storedValue, saveValue] = useLocalStorage('count', 0);
 
   const onClickAnswer = () => {
+    saveValue(storedValue + 1);
     navigate('/results');
   }
   return (

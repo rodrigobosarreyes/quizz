@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import { animated } from 'react-spring';
 import useHoverAnimation from '../../core/hooks/useHoverAnimation';
 import { useNavigate } from 'react-router-dom';
+import useLocalStorage from '../../core/hooks/useLocalStorage';
 
 const Question2: React.FC<any> = (props) => {
   const navigate = useNavigate();
@@ -14,6 +15,7 @@ const Question2: React.FC<any> = (props) => {
   const [aluneStarsHover2, setAluneStarsHover2] = useHoverAnimation(false, {fill: '#fff'});
   const [aluneTextHover, setAluneTextHover] = useHoverAnimation(false, {color: '#fff', margin: '-10px'});
   const [yuumiHover, setYuumiHover] = useHoverAnimation(false, {filter: 'grayscale(100%)', scale: 1});
+  const [storedValue, saveValue] = useLocalStorage('count', 0);
 
   const onAluneHover = (isHover: boolean) => {
     if (isHover) {
@@ -40,6 +42,11 @@ const Question2: React.FC<any> = (props) => {
   const onClickAnswer = () => {
     navigate('/question-3');
   }
+
+  const onClickCorrectAnswer = () => {
+    saveValue(storedValue + 1)
+    navigate('/question-3');
+  }
   
   useEffect(() => {
     document.title = 'You are the best <3'
@@ -55,7 +62,7 @@ const Question2: React.FC<any> = (props) => {
             <article className={styles.articleAlune}
               onMouseEnter={() => onAluneHover(true)}
               onMouseLeave={() => onAluneHover(false)}
-              onClick={() => onClickAnswer()}
+              onClick={onClickCorrectAnswer}
             >
               <animated.img
                 style={aluneHover}
