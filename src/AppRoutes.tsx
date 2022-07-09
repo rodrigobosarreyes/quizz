@@ -8,7 +8,6 @@ import Question4 from "./pages/question4/Question4";
 import Question5 from "./pages/question5/Question5";
 import Results from "./pages/results/Results";
 import CountdownPage from "./components/countdown/Countdown";
-import Test from "./pages/prueba/prueba";
 
 const AppRoutes = () => {
   const location = useLocation();
@@ -29,7 +28,6 @@ const AppRoutes = () => {
           <Route path='/question-4' element={<Question4 />}/>
           <Route path='/question-5' element={<Question5 />}/>
           <Route path='/results' element={<Results />}/>
-          <Route path='/test' element={<Test />}/>
         </Routes>
       </animated.div>
     ));
