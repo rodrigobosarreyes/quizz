@@ -19,6 +19,10 @@ export const CountdownPage = () => {
     });
   }, [navigate]);
 
+  useEffect(() => {
+    document.title = 'Soon, Emm...'
+  }, [])
+
   const onComplete = () => {
     const res = fetch('http://worldtimeapi.org/api/timezone/Europe/London', {method: 'GET'}).then( r => r.json());
     res.then(realDate => {
