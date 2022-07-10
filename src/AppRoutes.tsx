@@ -20,8 +20,8 @@ const AppRoutes = () => {
   return transitions((props, items) => (
       <animated.div style={props}>
         <Routes location={items}>
-          {/* <Route path='/' element={<CountdownPage />}/> */}
-          <Route path='/' element={<App />}/>
+          <Route path='/' element={<CountdownPage />}/>
+          {/* <Route path='/' element={<App />}/> */}
           <Route path='/question-1' element={<Question1 />}/>
           <Route path='/question-2' element={<Question2 />}/>
           <Route path='/question-3' element={<Question3 />}/>
