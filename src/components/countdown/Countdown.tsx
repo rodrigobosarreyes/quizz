@@ -10,7 +10,7 @@ export const CountdownPage = () => {
   const [now, setNow] = useState<Date>();
 
   useEffect(() => {
-    const res = fetch('http://worldtimeapi.org/api/timezone/Europe/London', {method: 'GET'}).then( r => r.json());
+    const res = fetch('https://worldtimeapi.org/api/timezone/Europe/London', {method: 'GET'}).then( r => r.json());
     res.then(realDate => {
       if (new Date(realDate.datetime).getTime() >= deadline.current.getTime()) {
         navigate('/start');
@@ -24,7 +24,7 @@ export const CountdownPage = () => {
   }, [])
 
   const onComplete = () => {
-    const res = fetch('http://worldtimeapi.org/api/timezone/Europe/London', {method: 'GET'}).then( r => r.json());
+    const res = fetch('https://worldtimeapi.org/api/timezone/Europe/London', {method: 'GET'}).then( r => r.json());
     res.then(realDate => {
       if (realDate && (new Date(realDate.datetime).getTime() >= deadline.current.getTime())) {
         navigate('/start');
