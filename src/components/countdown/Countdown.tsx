@@ -3,7 +3,7 @@ import Countdown from "react-countdown";
 import { useNavigate } from "react-router-dom";
 
 export const CountdownPage = () => {
-  const deadline = useRef<Date>(new Date(2022, 8, 21, 20, 48, 0));
+  const deadline = useRef<Date>(new Date(2022, 7, 21, 20, 48, 0));
   const navigate = useNavigate();
 
   const [isTramposa, setTramposa] = useState<boolean>(false);
